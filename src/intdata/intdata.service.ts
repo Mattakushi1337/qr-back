@@ -10,8 +10,8 @@ export class IntDataService {
         private readonly intDataRepository: Repository<IntData>,
     ) { }
 
-    async findByName(name: string): Promise<IntData | undefined> {
-        return await this.intDataRepository.findOne({ where: { name } });
+    async findByName(id: string): Promise<IntData | undefined> {
+        return await this.intDataRepository.findOne({ where: { id } });
     }
 
     async findAll(): Promise<IntData[]> {
@@ -26,7 +26,7 @@ export class IntDataService {
         await this.intDataRepository.update(id, { check: 0 });
     }
 
-    async updateById(id: number, params: Partial<IntData>): Promise<void> {
+    async updateById(id: string, params: Partial<IntData>): Promise<void> {
         await this.intDataRepository.update(id, params);
     }
 }

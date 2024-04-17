@@ -3,10 +3,13 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn } from 'typeor
 @Entity()
 export class IntData {
     @PrimaryGeneratedColumn()
-    id: number;
+    id: string;
 
     @Column()
     name: string;
+
+    @Column()
+    category: string;
 
     @Column()
     intNumber: number;

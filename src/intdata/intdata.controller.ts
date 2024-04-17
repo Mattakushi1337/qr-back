@@ -6,9 +6,9 @@ import { IntData } from './intdata.entity';
 export class IntDataController {
     constructor(private readonly intDataService: IntDataService) { }
 
-    @Get(':name')
-    async findByName(@Param('name') name: string): Promise<IntData> {
-        return this.intDataService.findByName(name);
+    @Get(':id')
+    async findByName(@Param('id') id: string): Promise<IntData> {
+        return this.intDataService.findByName(id);
     }
 
     @Get()
@@ -28,6 +28,6 @@ export class IntDataController {
 
     @Patch(':id')
     async update(@Param('id') id: string, @Body() updatedFields: Partial<IntData>): Promise<void> {
-        await this.intDataService.updateById(+id, updatedFields);
+        await this.intDataService.updateById(id, updatedFields);
     }
 }
