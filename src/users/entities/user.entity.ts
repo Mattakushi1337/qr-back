@@ -9,5 +9,14 @@ export class Users {
     fio: string;
 
     @Column()
+    it: boolean;
+
+    @Column()
+    asutp: boolean;
+
+    @Column()
+    aho: boolean;
+
+    @Column()
     imei: string;
 }
