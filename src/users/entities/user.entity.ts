@@ -3,19 +3,19 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn } from 'typeor
 @Entity()
 export class Users {
     @PrimaryGeneratedColumn()
-    id: number;
+    id: string;
 
     @Column()
     fio: string;
 
     @Column()
-    it: boolean;
+    it: string;
 
     @Column()
-    asutp: boolean;
+    asutp: string;
 
     @Column()
-    aho: boolean;
+    aho: string;
 
     @Column()
     imei: string;
