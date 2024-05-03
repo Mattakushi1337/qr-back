@@ -31,4 +31,16 @@ export class IntData {
 
     @Column()
     check: number;
+
+    @Column()
+    qr: number;
+
+    @Column()
+    cmdb: number;
+
+    @Column()
+    qr2: number;
+
+    @Column()
+    itsm: number;
 }
