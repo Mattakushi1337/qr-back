@@ -6,6 +6,7 @@ import { DataModule } from './data/data.module';
 import { IntdataModule } from './intdata/intdata.module';
 import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
+import { AppGateway } from './app.gateway';
 
 @Module({
   imports: [
@@ -24,6 +25,6 @@ import { UsersModule } from './users/users.module';
     UsersModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AppGateway],
 })
 export class AppModule { }
