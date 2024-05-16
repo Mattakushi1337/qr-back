@@ -9,6 +9,14 @@ export class AppGateway implements OnGatewayInit {
         console.log('WebSocket initialized');
     }
 
+    handleConnection(client: Socket) {
+        console.log(`Client connected: ${client.id}`);
+    }
+
+    handleDisconnect(client: Socket) {
+        console.log(`Client disconnected: ${client.id}`);
+    }
+
     @SubscribeMessage('animation_1')
     handleAnimation1(@MessageBody() data: any): void {
         console.log('animation_1', data);
