@@ -4,17 +4,7 @@ import * as cors from 'cors';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-
-  app.use(cors({ origin: '*' }));
-
-  const httpServer = app.getHttpServer();
-  const io = require('socket.io')(httpServer, {
-    cors: {
-      origin: "*",
-      methods: ["GET", "POST"]
-    }
-  });
-
+  app.enableCors();
   await app.listen(parseInt(process.env.PORT));
 }
 
