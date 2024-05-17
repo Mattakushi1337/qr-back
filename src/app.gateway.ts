@@ -46,21 +46,22 @@ export class AppGateway implements OnGatewayInit {
 
   @SubscribeMessage('start_1')
   startAnimation1(): void {
-    this.server.emit('animation_1', { trigger: true });
+    this.server.emit('start_1', { trigger: true });
   }
 
   @SubscribeMessage('start_2')
   startAnimation2(): void {
-    this.server.emit('animation_2', { trigger: true });
+    this.server.emit('start_2', { trigger: true });
   }
 
   @SubscribeMessage('start_3')
   startAnimation3(): void {
-    this.server.emit('animation_3', { trigger: true });
+    this.server.emit('start_3', { trigger: true });
   }
 
   @SubscribeMessage('start_4')
   startAnimation4(): void {
-    this.server.emit('animation_4', { trigger: true });
+    this.server.emit('start_4', { trigger: true });
   }
+
 }
