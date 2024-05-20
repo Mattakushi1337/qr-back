@@ -69,4 +69,9 @@ export class AppGateway implements OnGatewayInit {
     this.server.emit('start_4', { trigger: true });
   }
 
+  @SubscribeMessage('end')
+  closeModal(): void {
+    this.server.emit('end', { trigger: true });
+  }
+
 }
